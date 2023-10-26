@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "author_picture": "https://kwikku.us/uploads/public/images/listicle/content/75187-listicle-20171212210259.jpg",
+        "author_full_name": "Yoru",
+        "author_username": "kokuto",
+        "posted_at": "3h",
+        "content": "ittoryu",
+        "image": "https://cdn.idntimes.com/content-images/duniaku/post/20200804/daikodan-no-jutsu-f152e296f88346d45864418859c2a73a.png",
+        "likes_count": 10,
+        "replies_count": 2,
+        "is_liked": true
+    },
+    {
+        "id": 2,
+        "author_picture": "https://pm1.aminoapps.com/7500/6f03aee8db299d46b8aec7aa2408096e716ec724r1-731-591v2_hq.jpg",
+        "author_full_name": "Owazamono",
+        "author_username": "meito",
+        "posted_at": "1h",
+        "content": "nittoryu",
+        "image": "https://cdn.idntimes.com/content-images/duniaku/post/20200804/daikodan-no-jutsu-f152e296f88346d45864418859c2a73a.png",
+        "likes_count": 9,
+        "replies_count": 1,
+        "is_liked": false
+    }
+]
