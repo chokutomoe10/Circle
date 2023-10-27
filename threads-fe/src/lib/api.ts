@@ -2,7 +2,8 @@ import axios from "axios"
 
 export const API = axios.create(
     {
-        baseURL: "http://localhost:5000/api/v1"
+        baseURL: "https://circle-ten.vercel.app/api/v1"
+        // baseURL: "http://localhost:5000/api/v1" //ini yg dipakai
         // baseURL: "https://localhost:5000/api/v1"
     }
 )
