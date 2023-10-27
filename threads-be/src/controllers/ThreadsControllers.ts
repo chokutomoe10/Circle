@@ -10,6 +10,10 @@ class ThreadController {
         ThreadServices.findOne(req,res)
     }
 
+    create(req:Request, res:Response){
+        ThreadServices.create(req,res)
+    }
+
     delete(req:Request, res:Response){
         ThreadServices.delete(req,res)
     }

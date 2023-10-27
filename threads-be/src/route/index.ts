@@ -5,7 +5,7 @@ import ThreadsControllers from '../controllers/ThreadsControllers'
 import AuthControllers from '../controllers/AuthControllers'
 import authenticate from '../middlewares/auth'
 import { upload } from '../middlewares/uploadFile'
-import ThreadsQueue from '../queues/ThreadsQueue'
+// import ThreadsQueue from '../queues/ThreadsQueue'
 import LikesControllers from '../controllers/LikesControllers'
 import RepliesControllers from '../controllers/RepliesControllers'
 import FollowsController from '../controllers/FollowsController'
@@ -19,7 +19,8 @@ router.get("/", (req: Request, res: Response) => {
 //thread
 router.get("/thread", authenticate, ThreadsControllers.find)
 router.get("/thread/:id", authenticate, ThreadsControllers.findOne)
-router.post("/thread", authenticate, upload("image"), ThreadsQueue.create)
+router.post("/thread", authenticate, upload("image"), ThreadsControllers.create)
+// router.post("/thread", authenticate, upload("image"), ThreadsQueue.create)
 router.get("/thread/delete/:id", ThreadsControllers.delete)
 router.patch("/thread/update/:id", ThreadsControllers.update)
 
