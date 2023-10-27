@@ -1,9 +1,11 @@
-import { Heading, Box, Button, Text, Container, Image, Avatar } from '@chakra-ui/react'
+import { Heading, Box, Button, Text, Container, Image, Avatar, Flex } from '@chakra-ui/react'
 import { RootState } from '../../../stores/types/rootState'
 import { useSelector } from 'react-redux'
+import { followHook } from '../../../hooks/followHooks'
 
 export function RightBar() {
     const auth = useSelector((state : RootState) => state.auth)
+    const { follower, followed } = followHook()
 
     return (
         <>
@@ -15,10 +17,20 @@ export function RightBar() {
                 <Heading as="h5" size='md' color={'white'}>{auth.full_name}</Heading>
                 <Text fontSize="12px" color={'grey'}>@{auth.username}</Text>
                 <Text fontSize="14px" color={'white'}>{auth.profile_description}</Text>
-                <Box fontSize="14px" color={'grey'} display="flex" justifyContent="space-between" w="43%">
-                <Text w="47%" display="flex" justifyContent="space-between" color="grey"><p style={{color: "white", fontWeight: "bold"}}>32</p>Following</Text>
-                <Text w="47%" display="flex" justifyContent="space-between" color="grey"><p style={{color: "white", fontWeight: "bold"}}>100</p>Follower</Text>
-                </Box>
+                <Flex fontSize={'14px'} gap={2}>
+                    <Flex gap={'3px'}>
+                        <Text as={'b'}>{followed?.length}</Text>
+                        <Text color={'grey'}>Following</Text>
+                    </Flex>
+                    <Flex gap={'3px'}>
+                        <Text as={'b'}>{follower?.length}</Text>
+                        <Text color={'grey'}>Follower</Text>
+                    </Flex>
+                </Flex>
+                {/* <Box fontSize="14px" color={'grey'} display="flex" justifyContent="space-between" w="43%">
+                    <Text w="47%" display="flex" justifyContent="space-between" color="grey"><p style={{color: "white", fontWeight: "bold"}}>32</p>Following</Text>
+                    <Text w="47%" display="flex" justifyContent="space-between" color="grey"><p style={{color: "white", fontWeight: "bold"}}>100</p>Follower</Text>
+                </Box> */}
             </Container>
             <Container bgColor={'black'} p="20px" mt="10px" borderRadius={10}>
                 <Heading as="h5" size='sm' color={'white'}>Suggested For You</Heading>

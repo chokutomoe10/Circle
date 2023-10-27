@@ -1,4 +1,5 @@
-import * as express from 'express'
+import express = require ("express")
+// import * as express from 'express'
 import { Request, Response } from "express"
 import ThreadsControllers from '../controllers/ThreadsControllers'
 import AuthControllers from '../controllers/AuthControllers'

@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
-import * as amqp from 'amqplib'
+import amqp = require ("amqplib")
+// import * as amqp from 'amqplib'
 import { createThreadSchema } from "../utils/validators/thread"; //
 
 class ThreadQueue {

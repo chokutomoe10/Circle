@@ -1,6 +1,8 @@
 import { AppDataSource } from "./data-source"
-import * as express from 'express'
-import * as cors from 'cors'
+import express = require ("express");
+// import * as express from 'express'
+import cors = require ("cors");
+// import * as cors from 'cors'
 import router from "./route"
 
 AppDataSource.initialize().then(async () => {

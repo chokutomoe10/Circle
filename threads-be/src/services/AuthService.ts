@@ -1,10 +1,12 @@
 import { Request, Response } from "express";
 import { AppDataSource } from "../data-source";
-import * as bcrypt from "bcrypt";
+import bcrypt = require ("bcrypt")
+// import * as bcrypt from "bcrypt";
 import { Repository } from "typeorm";
 import { User } from "../entities/User";
 import { loginSchema, registerSchema } from "../utils/validators/user";
-import * as jwt from "jsonwebtoken"
+import jwt = require ("jsonwebtoken")
+// import * as jwt from "jsonwebtoken"
 
 class AuthService {
     private readonly authRepository: Repository<User> = AppDataSource.getRepository(User);
